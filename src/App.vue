@@ -4,10 +4,12 @@
   import EAlert from './components/EAlert.ce.vue'
   import ERadio from './components/ERadio.ce.vue'
   import ECheckbox from './components/ECheckbox.ce.vue'
+  import EInput from './components/EInput.ce.vue'
 
   const colorSelected = ref('')
   const termsAndConditions = ref(false)
   const fruitList = ref<string[]>([])
+  const textInput = ref('')
 </script>
 
 <template>
@@ -45,6 +47,9 @@
       <ECheckbox v-model="fruitList" value="platano" label="Platano" ></ECheckbox>
 
       {{ fruitList }}
+
+      <EInput v-model="textInput" placeholder="message" />
+      {{ textInput }}
     </div>
   </div>
 </template>
