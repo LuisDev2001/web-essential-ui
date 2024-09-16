@@ -5,11 +5,25 @@
   import ERadio from './components/ERadio.ce.vue'
   import ECheckbox from './components/ECheckbox.ce.vue'
   import EInput from './components/EInput.ce.vue'
+  import ESelect from './components/ESelect.ce.vue'
 
   const colorSelected = ref('')
   const termsAndConditions = ref(false)
   const fruitList = ref<string[]>([])
   const textInput = ref('')
+  const selectInput = ref('')
+
+  const itemTextList = ref(['item 1', 'item 2', 'item 3', 'item 4', 'item 5'])
+  const countryList = ref([
+    { name: 'Perú', code: 'pe' },
+    { name: 'Colombia', code: 'co' },
+    { name: 'Chile', code: 'cl' },
+    { name: 'Argentina', code: 'ar' },
+    { name: 'Ecuador', code: 'ec' },
+  ])
+
+  const selectOne = ref('')
+  const selectTwo = ref('')
 </script>
 
 <template>
@@ -50,6 +64,16 @@
 
       <EInput v-model="textInput" placeholder="message" />
       {{ textInput }}
+
+      <ESelect v-model="selectOne" :items="itemTextList"></ESelect>
+      {{ selectOne }}
+      <ESelect
+        v-model="selectTwo"
+        :items="countryList"
+        item-text="name"
+        item-value="code"
+      ></ESelect>
+      {{ selectTwo }}
     </div>
   </div>
 </template>
