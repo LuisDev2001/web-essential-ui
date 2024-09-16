@@ -3,8 +3,11 @@
   import EButton from './components/EButton.ce.vue'
   import EAlert from './components/EAlert.ce.vue'
   import ERadio from './components/ERadio.ce.vue'
+  import ECheckbox from './components/ECheckbox.ce.vue'
 
   const colorSelected = ref('')
+  const termsAndConditions = ref(false)
+  const fruitList = ref<string[]>([])
 </script>
 
 <template>
@@ -33,6 +36,15 @@
       <ERadio v-model="colorSelected" label="amarillo" value="amarillo" disabled></ERadio>
 
       {{ colorSelected }}
+
+      <ECheckbox v-model="termsAndConditions" label="Terminos y condiciones"></ECheckbox>
+      {{ termsAndConditions }}
+
+      <ECheckbox v-model="fruitList" value="pera" label="Pera"></ECheckbox>
+      <ECheckbox v-model="fruitList" value="manzana" label="Manzana" ></ECheckbox>
+      <ECheckbox v-model="fruitList" value="platano" label="Platano" ></ECheckbox>
+
+      {{ fruitList }}
     </div>
   </div>
 </template>

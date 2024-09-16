@@ -1,13 +1,15 @@
 <script setup lang="ts">
   import { useId } from 'vue'
 
-  const props = defineProps<{
+  export interface Props {
     label?: string
-    value: string
+    value?: string
     disabled?: boolean
-  }>()
+  }
 
-  const modelValue = defineModel<string>({ required: true })
+  const props = defineProps<Props>()
+
+  const modelValue = defineModel<string[] | number[] | boolean>({ required: true })
 
   const id = useId()
 </script>
@@ -15,9 +17,9 @@
 <template>
   <div class="flex items-center space-x-2">
     <input
-      type="radio"
+      type="checkbox"
       :id="id"
-      class="form-radio h-4 w-4 text-blue-500 border-blue-500"
+      class="form-checkbox h-4 w-4 rounded text-blue-500 border-blue-500"
       :class="[
         disabled && 'bg-gray-400 border-0'
       ]"
@@ -34,3 +36,5 @@
     </label>
   </div>
 </template>
+
+
