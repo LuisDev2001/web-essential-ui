@@ -1,6 +1,10 @@
 <script setup lang="ts">
+  import { ref } from 'vue'
   import EButton from './components/EButton.ce.vue'
-  import EAlert from './components/EAlert.ce.vue';
+  import EAlert from './components/EAlert.ce.vue'
+  import ERadio from './components/ERadio.ce.vue'
+
+  const colorSelected = ref('')
 </script>
 
 <template>
@@ -23,6 +27,12 @@
       <EAlert variant="warning">
         Williamsburg carles vegan helvetica.
       </EAlert>
+
+      <ERadio v-model="colorSelected" label="rojo" value="rojo"></ERadio>
+      <ERadio v-model="colorSelected" label="verde" value="verde"></ERadio>
+      <ERadio v-model="colorSelected" label="amarillo" value="amarillo" disabled></ERadio>
+
+      {{ colorSelected }}
     </div>
   </div>
 </template>
