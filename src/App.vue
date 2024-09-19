@@ -12,7 +12,7 @@
   const termsAndConditions = ref(false)
   const fruitList = ref<string[]>([])
   const textInput = ref('')
-  const selectInput = ref('')
+  // const selectInput = ref('')
 
   const itemTextList = ref(['item 1', 'item 2', 'item 3', 'item 4', 'item 5'])
   const countryList = ref([

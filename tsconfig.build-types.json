@@ -1,0 +1,40 @@
+{
+  "include": [
+    "src/components/**/*.vue",
+    "src/**/*",
+    "env.d.ts",
+  ],
+  "exclude": [
+    "vite.config.ts",
+    "node_modules"
+  ],
+  "compilerOptions": {
+    "outDir": "dist/types",
+    "sourceMap": true,
+    "declaration": true,
+    "declarationMap": true,
+    "types": [
+      "node",
+    ],
+    "strict": true,
+    "target": "ESNext",
+    "module": "ESNext",
+    "moduleResolution": "Node",
+    "baseUrl": ".",
+    "paths": {
+      "@/*": [
+        "./src/*"
+      ]
+    },
+    "jsx": "preserve",
+    "esModuleInterop": true,
+    "skipLibCheck": true,
+    "forceConsistentCasingInFileNames": true,
+    "noImplicitReturns": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+  }
+}
