@@ -1,6 +1,6 @@
 {
   "name": "web-essential-ui",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "private": false,
   "type": "module",
   "description": "A versatile UI component library built with web components, ensuring compatibility across all modern web frameworks and environments. Perfect for seamless integration with Vue 3, TypeScript, and Tailwind CSS.",
