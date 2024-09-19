@@ -6,6 +6,7 @@
   import ECheckbox from './components/ECheckbox.ce.vue'
   import EInput from './components/EInput.ce.vue'
   import ESelect from './components/ESelect.ce.vue'
+  import ETable from './components/ETable.ce.vue'
 
   const colorSelected = ref('')
   const termsAndConditions = ref(false)
@@ -24,6 +25,13 @@
 
   const selectOne = ref('')
   const selectTwo = ref('')
+
+  const headers = ['Product name', 'Color', 'Category', 'Price', 'Actions']
+  const rows = [
+  { 'Product name': 'Apple MacBook Pro 17"', 'Color': 'Silver', 'Category': 'Laptop', 'Price': '$2999' },
+  { 'Product name': 'Microsoft Surface Pro', 'Color': 'White', 'Category': 'Laptop PC', 'Price': '$1999' },
+  { 'Product name': 'Magic Mouse 2', 'Color': 'Black', 'Category': 'Accessories', 'Price': '$99' }
+]
 </script>
 
 <template>
@@ -74,6 +82,12 @@
         item-value="code"
       ></ESelect>
       {{ selectTwo }}
+
     </div>
+    <ETable :headers="headers" :rows="rows">
+      <template #actions>
+        <button>Edit</button>
+      </template>
+    </ETable>
   </div>
 </template>
