@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "private": true,
   "type": "module",
+  "description": "A versatile UI component library built with web components, ensuring compatibility across all modern web frameworks and environments. Perfect for seamless integration with Vue 3, TypeScript, and Tailwind CSS.",
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
@@ -42,5 +43,15 @@
     "vite-plugin-vue-devtools": "^7.4.5",
     "vitest": "^2.1.1",
     "vue-tsc": "^2.1.6"
-  }
+  },
+  "keywords": [
+    "vue",
+    "javascript",
+    "webcomponents",
+    "ui",
+    "frontend",
+    "tailwindcss",
+    "vite",
+    "typescript"
+  ]
 }
