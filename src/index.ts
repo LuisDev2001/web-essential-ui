@@ -35,7 +35,7 @@ export const EIconElement = defineCustomElement(EIcon, {
   shadowRoot: false
 })
 
-const registerEssentialComponents = () => {
+export const registerEssentialComponents = () => {
   customElements.define('e-button', EButtonElement)
   customElements.define('e-alert', EAlertElement)
   customElements.define('e-radio', ERadioElement)
@@ -45,5 +45,3 @@ const registerEssentialComponents = () => {
   customElements.define('e-table', ETableElement)
   customElements.define('e-icon', EIconElement)
 }
-
-export default registerEssentialComponents
