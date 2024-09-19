@@ -7,13 +7,13 @@ import EInput from '@/components/EInput.ce.vue'
 import ESelect from '@/components/ESelect.ce.vue'
 import ETable from '@/components/ETable.ce.vue'
 
-const EButtonElement = defineCustomElement(EButton)
-const EAlertElement = defineCustomElement(EAlert)
-const ERadioElement = defineCustomElement(ERadio)
-const ECheckboxElement = defineCustomElement(ECheckbox)
-const EInputElement = defineCustomElement(EInput)
-const ESelectElement = defineCustomElement(ESelect)
-const ETableElement = defineCustomElement(ETable)
+export const EButtonElement = defineCustomElement(EButton)
+export const EAlertElement = defineCustomElement(EAlert)
+export const ERadioElement = defineCustomElement(ERadio)
+export const ECheckboxElement = defineCustomElement(ECheckbox)
+export const EInputElement = defineCustomElement(EInput)
+export const ESelectElement = defineCustomElement(ESelect)
+export const ETableElement = defineCustomElement(ETable)
 
 const registerEssentialComponents = () => {
   customElements.define('e-button', EButtonElement)

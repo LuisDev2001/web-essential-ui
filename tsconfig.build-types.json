@@ -3,10 +3,12 @@
     "src/components/**/*.vue",
     "src/**/*",
     "env.d.ts",
+    "components.d.ts"
   ],
   "exclude": [
     "vite.config.ts",
-    "node_modules"
+    "node_modules",
+    "src/App.vue"
   ],
   "compilerOptions": {
     "outDir": "dist/types",

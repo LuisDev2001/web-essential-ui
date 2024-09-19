@@ -1,5 +1,5 @@
 import { fileURLToPath, URL } from 'node:url'
-
+import { resolve } from 'path'
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
@@ -22,5 +22,18 @@ export default defineConfig({
     alias: {
       '@': fileURLToPath(new URL('./src', import.meta.url))
     }
-  }
+  },
+  build: {
+    lib: {
+      entry: resolve(__dirname, './src/index.ts'),
+      formats: ["es"],
+      name: "EssentialUiWebcomponents",
+      fileName: "essential-webcomponents"
+    },
+    sourcemap: false,
+    target: "esnext",
+    minify: true,
+  },
+  define: { 'process.env.NODE_ENV': '"production"' }
+
 })

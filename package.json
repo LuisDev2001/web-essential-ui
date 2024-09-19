@@ -1,9 +1,18 @@
 {
   "name": "web-essential-ui",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "private": false,
   "type": "module",
   "description": "A versatile UI component library built with web components, ensuring compatibility across all modern web frameworks and environments. Perfect for seamless integration with Vue 3, TypeScript, and Tailwind CSS.",
+  "files": [
+    "dist"
+  ],
+  "module": "./dist/essential-webcomponents.js",
+  "exports": {
+    ".": {
+      "import": "./dist/essential-webcomponents.js"
+    }
+  },
   "scripts": {
     "dev": "vite",
     "build": "run-p type-check \"build-only {@}\" --",
