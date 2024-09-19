@@ -1,4 +1,6 @@
 import { defineCustomElement } from 'vue'
+
+import '@/assets/main.css'
 import EButton from '@/components/EButton.ce.vue'
 import EAlert from '@/components/EAlert.ce.vue'
 import ERadio from '@/components/ERadio.ce.vue'
