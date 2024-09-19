@@ -40,7 +40,7 @@
       {'rounded-[37px]': rounded},
       !outlined ? 'bg-blue-500' : 'bg-transparent border border-blue-500'
     ]"
-    @click="emit('click', $event)"
+    @click.stop="emit('click', $event)"
   >
     <slot></slot>
   </button>
