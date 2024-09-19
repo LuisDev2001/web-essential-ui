@@ -1,6 +1,6 @@
 {
   "name": "web-essential-ui",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "private": true,
   "type": "module",
   "scripts": {
@@ -16,7 +16,7 @@
   "dependencies": {
     "@floating-ui/vue": "^1.1.5",
     "iconify-icon": "^2.1.0",
-    "vue": "^3.5.5"
+    "vue": "^3.5.6"
   },
   "devDependencies": {
     "@rushstack/eslint-patch": "^1.8.0",

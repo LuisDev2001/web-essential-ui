@@ -8,10 +8,11 @@ import vueDevTools from 'vite-plugin-vue-devtools'
 export default defineConfig({
   plugins: [
     vue({
+      customElement: true,
       template: {
         compilerOptions: {
           // treat all tags with a dash as custom elements
-          isCustomElement: (tag) => tag.includes('-') ||  tag === 'iconify-icon'
+          isCustomElement: (tag) => tag.includes('-') || tag === 'iconify-icon'
         }
       }
     }),

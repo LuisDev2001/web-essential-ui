@@ -1,4 +1,4 @@
-<script setup lang="ts" generic="T">
+<script setup lang="ts" >
   import { useTemplateRef, ref } from 'vue'
   import {
     useFloating,
@@ -7,14 +7,18 @@
     shift,
   } from '@floating-ui/vue'
   import EIcon from './EIcon.ce.vue'
+
+  interface Item {
+    [key: string]: string | number
+  }
   
-  export interface Props<T> {
-    items: T[],
+  export interface Props {
+    items: Item[] | string[] | number[],
     itemText?: string
     itemValue?: string
   }
 
-  const props = withDefaults(defineProps<Props<T>>(), {
+  const props = withDefaults(defineProps<Props>(), {
     itemText: 'name'
   })
 
@@ -36,7 +40,7 @@
     open: isOpen.value,
   })
 
-  const handleChange = (item: T) => {
+  const handleChange = (item: Item | string | number) => {
     if (props.itemValue) {
       modelValue.value = typeof item === 'object' && item !== null ? (item as Record<string, any>)[props.itemValue] : item as unknown as string
     } else {
