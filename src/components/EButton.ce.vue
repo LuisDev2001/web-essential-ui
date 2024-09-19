@@ -34,7 +34,7 @@
 <template>
   <button
     class="text-neutral-50 rounded-md"
-    v-bind="$attrs"
+    v-bind="{ ...$attrs, id: undefined }"
     :class="[
       sizeClasses,
       {'rounded-[37px]': rounded},
