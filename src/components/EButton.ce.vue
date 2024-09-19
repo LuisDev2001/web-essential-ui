@@ -25,11 +25,16 @@
     }
     return classes[size]
   })
+
+  defineOptions({
+    inheritAttrs: false
+  })
 </script>
 
 <template>
   <button
     class="text-neutral-50 rounded-md"
+    v-bind="$attrs"
     :class="[
       sizeClasses,
       {'rounded-[37px]': rounded},
