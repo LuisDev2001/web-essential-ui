@@ -1,0 +1,5 @@
+# Ignorar todo por defecto
+*
+
+# Exceptuar el directorio dist
+!dist
